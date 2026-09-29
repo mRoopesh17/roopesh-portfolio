@@ -1,76 +1,70 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 500 280" width="100%" height="100%" fill="none">
   <defs>
     <linearGradient id="aiGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-      <stop offset="0%" stop-color="#ec4899" stop-opacity="0.15"/>
-      <stop offset="50%" stop-color="#8b5cf6" stop-opacity="0.15"/>
-      <stop offset="100%" stop-color="#3b82f6" stop-opacity="0.15"/>
+      <stop offset="0%" stop-color="#0284c7" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#1e293b" stop-opacity="0.08"/>
     </linearGradient>
   </defs>
 
-  <rect width="500" height="280" rx="16" fill="#0b0f19"/>
-  <rect x="1" y="1" width="498" height="278" rx="15" fill="url(#aiGrad)" stroke="#8b5cf6" stroke-opacity="0.25"/>
+  <rect width="500" height="280" rx="4" fill="#090b10"/>
+  <rect x="1" y="1" width="498" height="278" rx="3" fill="url(#aiGrad)" stroke="#1e2636" stroke-width="1"/>
 
   <!-- Scanning Reticle & Bounding Box -->
   <g transform="translate(180, 45)">
     <!-- Face Contour Outline -->
     <path d="M 70 20 C 35 20 15 50 15 95 C 15 140 40 170 70 170 C 100 170 125 140 125 95 C 125 50 105 20 70 20 Z" 
-          stroke="#a855f7" stroke-width="1.5" stroke-dasharray="3 3" fill="#a855f7" fill-opacity="0.05"/>
+          stroke="#0284c7" stroke-width="1.2" stroke-dasharray="3 3" fill="#0284c7" fill-opacity="0.04"/>
 
     <!-- Facial Landmark Points -->
-    <!-- Eyes -->
-    <circle cx="50" cy="80" r="3" fill="#38bdf8"/>
-    <circle cx="90" cy="80" r="3" fill="#38bdf8"/>
-    <!-- Eyebrows -->
-    <path d="M 40 70 Q 50 65 60 70" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
-    <path d="M 80 70 Q 90 65 100 70" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
-    <!-- Nose bridge & tip -->
-    <line x1="70" y1="80" x2="70" y2="105" stroke="#a855f7" stroke-width="1.2"/>
-    <circle cx="70" cy="105" r="2.5" fill="#a855f7"/>
-    <!-- Mouth emotion curve -->
-    <path d="M 52 130 Q 70 145 88 130" stroke="#ec4899" stroke-width="2" fill="none"/>
+    <circle cx="50" cy="80" r="2.5" fill="#38bdf8"/>
+    <circle cx="90" cy="80" r="2.5" fill="#38bdf8"/>
+    <path d="M 40 70 Q 50 65 60 70" stroke="#38bdf8" stroke-width="1.2" fill="none"/>
+    <path d="M 80 70 Q 90 65 100 70" stroke="#38bdf8" stroke-width="1.2" fill="none"/>
+    <line x1="70" y1="80" x2="70" y2="105" stroke="#0284c7" stroke-width="1"/>
+    <circle cx="70" cy="105" r="2" fill="#0284c7"/>
+    <path d="M 52 130 Q 70 145 88 130" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
 
-    <!-- Mesh Lines Connecting Landmarks -->
-    <line x1="50" y1="80" x2="70" y2="105" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
-    <line x1="90" y1="80" x2="70" y2="105" stroke="#a855f7" stroke-opacity="0.4" stroke-width="1"/>
-    <line x1="70" y1="105" x2="52" y2="130" stroke="#ec4899" stroke-opacity="0.4" stroke-width="1"/>
-    <line x1="70" y1="105" x2="88" y2="130" stroke="#ec4899" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="50" y1="80" x2="70" y2="105" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="90" y1="80" x2="70" y2="105" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="70" y1="105" x2="52" y2="130" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
+    <line x1="70" y1="105" x2="88" y2="130" stroke="#0284c7" stroke-opacity="0.4" stroke-width="1"/>
 
     <!-- Corner Brackets of Detector -->
-    <path d="M -5 20 L -5 -5 L 20 -5" stroke="#38bdf8" stroke-width="2" fill="none"/>
-    <path d="M 120 -5 L 145 -5 L 145 20" stroke="#38bdf8" stroke-width="2" fill="none"/>
-    <path d="M -5 165 L -5 190 L 20 190" stroke="#38bdf8" stroke-width="2" fill="none"/>
-    <path d="M 120 190 L 145 190 L 145 165" stroke="#38bdf8" stroke-width="2" fill="none"/>
+    <path d="M -5 20 L -5 -5 L 20 -5" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+    <path d="M 120 -5 L 145 -5 L 145 20" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+    <path d="M -5 165 L -5 190 L 20 190" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
+    <path d="M 120 190 L 145 190 L 145 165" stroke="#38bdf8" stroke-width="1.5" fill="none"/>
   </g>
 
   <!-- Left Side: Probabilities -->
   <g transform="translate(35, 75)">
-    <text x="0" y="0" fill="#94a3b8" font-size="10" font-family="monospace">CLASSIFICATION</text>
-    <text x="0" y="22" fill="#f8fafc" font-size="11" font-family="system-ui" font-weight="600">Happy</text>
-    <rect x="0" y="28" width="100" height="4" rx="2" fill="#334155"/>
-    <rect x="0" y="28" width="88" height="4" rx="2" fill="#22c55e"/>
-    <text x="108" y="33" fill="#22c55e" font-size="10" font-family="monospace">88%</text>
+    <text x="0" y="0" fill="#64748b" font-size="9" font-family="monospace">CLASSIFICATION</text>
+    <text x="0" y="22" fill="#f0f4f8" font-size="11" font-family="sans-serif" font-weight="600">Happy</text>
+    <rect x="0" y="28" width="100" height="3" rx="1" fill="#1e2636"/>
+    <rect x="0" y="28" width="88" height="3" rx="1" fill="#22c55e"/>
+    <text x="108" y="32" fill="#22c55e" font-size="9" font-family="monospace">88%</text>
 
-    <text x="0" y="52" fill="#94a3b8" font-size="11" font-family="system-ui">Neutral</text>
-    <rect x="0" y="58" width="100" height="4" rx="2" fill="#334155"/>
-    <rect x="0" y="58" width="09" height="4" rx="2" fill="#94a3b8"/>
-    <text x="108" y="63" fill="#94a3b8" font-size="10" font-family="monospace">9%</text>
+    <text x="0" y="52" fill="#94a3b8" font-size="11" font-family="sans-serif">Neutral</text>
+    <rect x="0" y="58" width="100" height="3" rx="1" fill="#1e2636"/>
+    <rect x="0" y="58" width="09" height="3" rx="1" fill="#64748b"/>
+    <text x="108" y="62" fill="#64748b" font-size="9" font-family="monospace">9%</text>
 
-    <text x="0" y="82" fill="#94a3b8" font-size="11" font-family="system-ui">Surprise</text>
-    <rect x="0" y="88" width="100" height="4" rx="2" fill="#334155"/>
-    <rect x="0" y="88" width="03" height="4" rx="2" fill="#94a3b8"/>
-    <text x="108" y="93" fill="#94a3b8" font-size="10" font-family="monospace">3%</text>
+    <text x="0" y="82" fill="#94a3b8" font-size="11" font-family="sans-serif">Surprise</text>
+    <rect x="0" y="88" width="100" height="3" rx="1" fill="#1e2636"/>
+    <rect x="0" y="88" width="03" height="3" rx="1" fill="#64748b"/>
+    <text x="108" y="92" fill="#64748b" font-size="9" font-family="monospace">3%</text>
   </g>
 
-  <!-- Right Side: Model Specs -->
+  <!-- Right Side: Pipeline Details -->
   <g transform="translate(355, 75)">
-    <text x="0" y="0" fill="#94a3b8" font-size="10" font-family="monospace">PIPELINE</text>
-    <rect x="0" y="12" width="110" height="24" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-opacity="0.3"/>
-    <text x="10" y="28" fill="#e2e8f0" font-size="10" font-family="monospace">CNN / PyTorch</text>
+    <text x="0" y="0" fill="#64748b" font-size="9" font-family="monospace">PIPELINE</text>
+    <rect x="0" y="12" width="115" height="22" rx="2" fill="#11151e" stroke="#1e2636" stroke-width="1"/>
+    <text x="8" y="27" fill="#cbd5e1" font-size="9" font-family="monospace">CNN Architecture</text>
 
-    <rect x="0" y="44" width="110" height="24" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-opacity="0.3"/>
-    <text x="10" y="60" fill="#e2e8f0" font-size="10" font-family="monospace">Real-time Stream</text>
+    <rect x="0" y="42" width="115" height="22" rx="2" fill="#11151e" stroke="#1e2636" stroke-width="1"/>
+    <text x="8" y="57" fill="#cbd5e1" font-size="9" font-family="monospace">Haar Localization</text>
 
-    <rect x="0" y="76" width="110" height="24" rx="6" fill="#1e293b" stroke="#8b5cf6" stroke-opacity="0.3"/>
-    <text x="10" y="92" fill="#e2e8f0" font-size="10" font-family="monospace">Latency: 28ms</text>
+    <rect x="0" y="72" width="115" height="22" rx="2" fill="#11151e" stroke="#1e2636" stroke-width="1"/>
+    <text x="8" y="87" fill="#cbd5e1" font-size="9" font-family="monospace">Real-time Stream</text>
   </g>
 </svg>

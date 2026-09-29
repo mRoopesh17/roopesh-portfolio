@@ -1,112 +1,36 @@
 /* ==========================================================================
-   Animations & Dynamic Effects
+   Minimal Clean Utility Transitions
+   No over-the-top floating, pulsing, or distracting animations
    ========================================================================== */
 
-@keyframes pulseGlow {
-  0%, 100% {
-    opacity: 0.35;
-    transform: scale(1);
-  }
-  50% {
-    opacity: 0.65;
-    transform: scale(1.06);
-  }
+/* Fast, subtle transitions for hover states */
+.transition-fast {
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
 }
 
-@keyframes floatSlow {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(-8px) rotate(0.5deg);
-  }
-}
-
-@keyframes floatReverse {
-  0%, 100% {
-    transform: translateY(0px) rotate(0deg);
-  }
-  50% {
-    transform: translateY(8px) rotate(-0.5deg);
-  }
-}
-
-@keyframes subtleShimmer {
-  0% {
-    background-position: -200% center;
-  }
-  100% {
-    background-position: 200% center;
-  }
-}
-
-@keyframes liveDotPulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.7);
-  }
-  70% {
-    box-shadow: 0 0 0 8px rgba(34, 197, 94, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(34, 197, 94, 0);
-  }
-}
-
-@keyframes radarSweep {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-.animate-pulse-glow {
-  animation: pulseGlow 6s ease-in-out infinite;
-}
-
-.animate-float-1 {
-  animation: floatSlow 5s ease-in-out infinite;
-}
-
-.animate-float-2 {
-  animation: floatReverse 6s ease-in-out infinite 1s;
-}
-
-.live-indicator {
+/* Subtle status indicator */
+.status-indicator {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: #22c55e;
+  width: 7px;
+  height: 7px;
+  background-color: #2ea043;
   border-radius: 50%;
-  animation: liveDotPulse 2s infinite;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
-.live-indicator-amber {
+.status-indicator-muted {
   display: inline-block;
-  width: 8px;
-  height: 8px;
-  background-color: #f59e0b;
+  width: 7px;
+  height: 7px;
+  background-color: #d29922;
   border-radius: 50%;
-  animation: liveDotPulse 2s infinite;
+  margin-right: 6px;
+  vertical-align: middle;
 }
 
-/* Scroll reveal utility classes */
+/* Accessible, instantaneous reveal without delayed scroll jumps */
 .reveal-on-scroll {
-  opacity: 0;
-  transform: translateY(24px);
-  transition: opacity 0.7s cubic-bezier(0.16, 1, 0.3, 1), transform 0.7s cubic-bezier(0.16, 1, 0.3, 1);
-  will-change: opacity, transform;
-}
-
-.reveal-on-scroll.is-revealed {
   opacity: 1;
-  transform: translateY(0);
+  transform: none;
 }
-
-/* Stagger delay helpers */
-.delay-1 { transition-delay: 0.1s; }
-.delay-2 { transition-delay: 0.2s; }
-.delay-3 { transition-delay: 0.3s; }
-.delay-4 { transition-delay: 0.4s; }
-.delay-5 { transition-delay: 0.5s; }

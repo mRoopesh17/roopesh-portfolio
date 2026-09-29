@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Roopesh Mamidala — Portfolio Main Interactive Script
+   Roopesh Mamidala - Portfolio Main Interactive Script
    ========================================================================== */
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -41,7 +41,7 @@ function initMobileMenu() {
     drawer.classList.toggle('is-open');
     const isOpen = drawer.classList.contains('is-open');
     toggleBtn.setAttribute('aria-expanded', isOpen);
-    toggleBtn.innerHTML = isOpen ? '✕' : '☰';
+    toggleBtn.innerHTML = isOpen ? 'Close' : 'Menu';
   });
 
   // Close drawer when link clicked
@@ -49,7 +49,7 @@ function initMobileMenu() {
   drawerLinks.forEach(link => {
     link.addEventListener('click', () => {
       drawer.classList.remove('is-open');
-      toggleBtn.innerHTML = '☰';
+      toggleBtn.innerHTML = 'Menu';
     });
   });
 }
@@ -140,18 +140,18 @@ function initProjectModals() {
     modalBody.innerHTML = `
       <div style="margin-bottom: 1.5rem;">
         <div style="display: flex; align-items: center; gap: 0.75rem; margin-bottom: 0.5rem;">
-          <span class="mono-tag" style="color: var(--accent-cyan); font-weight: 700;">${project.category}</span>
-          <span style="font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 9999px; background: rgba(255,255,255,0.06); color: ${project.statusType === 'in-progress' ? '#fbbf24' : '#34d399'}; font-weight: 600;">
+          <span class="mono-tag" style="color: var(--text-code); font-weight: 700;">${project.category}</span>
+          <span style="font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: var(--radius-xs); border: 1px solid var(--border-subtle); background: var(--bg-tertiary); color: ${project.statusType === 'in-progress' ? '#fbbf24' : '#4ade80'}; font-weight: 600; font-family: var(--font-mono);">
             ${project.status}
           </span>
         </div>
         <h2 style="font-size: 1.85rem; font-weight: 800; color: #ffffff; line-height: 1.25; margin-bottom: 0.4rem;">
           ${project.title}
         </h2>
-        <p style="font-size: 1.05rem; color: var(--accent-cyan);">${project.subtitle}</p>
+        <p style="font-size: 1.05rem; color: var(--text-secondary);">${project.subtitle}</p>
       </div>
 
-      <div style="width: 100%; border-radius: 12px; overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--border-subtle); background: #0b0f19;">
+      <div style="width: 100%; border-radius: var(--radius-sm); overflow: hidden; margin-bottom: 1.5rem; border: 1px solid var(--border-subtle); background: #090b10;">
         <img src="${project.image}" alt="${project.title}" style="width: 100%; height: auto; display: block;" />
       </div>
 

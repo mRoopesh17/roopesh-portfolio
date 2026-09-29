@@ -1,12 +1,12 @@
 /* ==========================================================================
-   Roopesh Mamidala — Portfolio Structured Data
+   Roopesh Mamidala - Portfolio Structured Data
    ========================================================================== */
 
 const PORTFOLIO_DATA = {
   projects: [
     {
       id: "rag-project",
-      title: "RAG Project — Enterprise Knowledge Retrieval",
+      title: "RAG Project: Enterprise Knowledge Retrieval",
       subtitle: "Retrieval-Augmented Generation with Semantic Search & LLM Reasoning",
       status: "Currently Building",
       statusType: "in-progress",
